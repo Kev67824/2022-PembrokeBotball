@@ -61,7 +61,19 @@ void moveServo(int servo, int startPosition, int finalPosition){
   ao();
   }
 }[c]
-
+int main() {
+ int distance = 4500 
+// in ticks cmpc(0)
+ while (gmpc(0) < distance) { 
+motor(0, 50); motor(3, 50); } 
+ao(); 
+msleep(2000); 
+// see it stop? while 
+(gmpc(0) > 0) { 
+motor(0, -50); 
+motor(3, -50); 
+} ao(); 
+return 0; } 
 
 
 
